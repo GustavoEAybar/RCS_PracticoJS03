@@ -140,8 +140,83 @@ function Punto3() {
     document.write("</tr>");
   }
   document.write("</table>");
+  document.write(
+    `<br><button><a href="index.html">Volver al inicio</a></button></br>`
+  );
 }
-function Punto4() {}
-function Punto5() {}
-function Punto6() {}
-function Punto7() {}
+
+function Punto4() {
+    let numero = prompt("Ingrese un numero: ");
+    if (numero % 2 === 0) {
+        document.write(`El numero ${numero} es Par`);
+    } else if (numero % 3 === 0) {
+        document.write(`El numero ${numero} es Impar`);
+    }else{
+        alert("El numero ingresado debe ser distinto de 0");
+    }
+    document.write(
+        `<br><button><a href="index.html">Volver al inicio</a></button></br>`
+      );
+}
+
+function Punto5() {
+    let cadTex = prompt("Ingrese una cadena de texto: ");
+    if (cadTex === cadTex.toLowerCase()) {
+        document.write(`La cadena de texto esta compuesta por minusculas`);
+    } else if (cadTex === cadTex.toUpperCase()) {
+        document.write(`La cadena de texto esta compuesta por mayusculas`);
+    }else{
+        let may = 0;
+        let min = 0;
+        for (let i = 0; i <cadTex.length; i++) {
+            let codigo = cadTex[i].charCodeAt();
+            if(codigo >= 65 && codigo <= 90){
+                may++;
+            }else if(codigo >= 97 && codigo <= 122){
+                min++;
+            }
+        }
+        document.write(`La cadena de texto se compone por ${may} mayusculas y ${min} minusculas`);
+    }
+    document.write(
+        `<br><button><a href="index.html">Volver al inicio</a></button></br>`
+      );
+}
+
+function Punto6() {
+    let alto = prompt("Ingresar la altura del rectangulo: ");
+    let base = prompt("Ahora ingresar la base del rectangulo: ");
+    let perimetro = 2*(alto+base);
+    document.write(`La altura ingresada fue: ${alto}<br>`);
+    document.write(`La base ingresada fue: ${base}<br>`);
+    document.write(`El perimetro calculado es igual a: ${perimetro}`);
+    document.write(
+        `<br><button><a href="index.html">Volver al inicio</a></button></br>`
+      );
+}
+
+function Punto7() {
+    let numero = prompt("Ingrese un numero para ver su tabla de multiplicar: ");
+    let producto = 0;
+    document.write("<table>");
+  document.write("<thead>");
+  document.write("<tr>");
+  document.write("<th>Multiplicando</th>");
+  document.write("<th>Multiplicador</th>");
+  document.write("<th>Producto</th>");
+  document.write("</tr>");
+  document.write("</thead>");
+  document.write("<tbody>");
+  for (let i = 0; i <= 10; i++) {
+    document.write("<tr>");
+    document.write(`<td>${numero}</td>`);
+    document.write(`<td>${i}</td>`);
+    producto = numero * i;
+    document.write(`<td>${producto}</td>`);
+    document.write("</tr>");
+  }
+  document.write("</table>");
+    document.write(
+        `<br><button><a href="index.html">Volver al inicio</a></button></br>`
+      );
+    }
